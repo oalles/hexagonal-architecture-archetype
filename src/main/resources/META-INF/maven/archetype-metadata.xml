@@ -1,0 +1,46 @@
+<archetype-descriptor name="hexagonal-archetype">
+    <defaultGoal>install</defaultGoal>
+    <requiredProperties>
+        <requiredProperty key="parentGroupId">
+            <defaultValue>es.omarall</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentArtifactId">
+            <defaultValue>any</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentVersion">
+            <defaultValue>1.0.0</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>adapters</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/domain</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/ports</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/application</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
