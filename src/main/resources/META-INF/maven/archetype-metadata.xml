@@ -1,0 +1,158 @@
+<archetype-descriptor name="hexagonal-archetype">
+    <defaultGoal>install</defaultGoal>
+    <requiredProperties>
+        <requiredProperty key="parentGroupId">
+            <defaultValue>es.omarall</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentArtifactId">
+            <defaultValue>any</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="parentVersion">
+            <defaultValue>1.0.0</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>${groupId}.${artifactId}</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+    <fileSets>
+        <!-- Estructura principal de carpetas -->
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>adapters</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>sdk</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- Domain Module Structure -->
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/domain/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>package-info.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/domain/src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/domain/src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/domain/src/test/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/domain</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- Ports Module Structure -->
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/ports/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>package-info.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/ports/src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/ports/src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/ports/src/test/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/ports</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- Application Module Structure -->
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/application/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>package-info.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/application/src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>hexagon/application/src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/application/src/test/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>hexagon/application</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- An-adapter Module Structure -->
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>adapters/an-adapter</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>adapters/an-adapter/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>package-info.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>adapters/an-adapter/src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>adapters/an-adapter/src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>adapters/an-adapter/src/test/resources</directory>
+        </fileSet>
+
+        <!-- SDK Module Structure -->
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>sdk/a-spring-boot-starter</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>sdk/a-spring-boot-starter/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+                <include>package-info.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>sdk/a-spring-boot-starter/src/main/resources</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>sdk/a-spring-boot-starter/src/test/java</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false" encoding="UTF-8">
+            <directory>sdk/a-spring-boot-starter/src/test/resources</directory>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor>
